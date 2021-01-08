@@ -1,0 +1,15 @@
+<%- include('partials/head')%>
+      <%- include('partials/header')%>
+      <div class="center-container-login">
+        <div class="form-container">
+          <form class="form-container-form" action="/login" method="POST">
+            <input type="email" name="email" placeholder="Ingrese su email">
+            <input type="password" name="password" placeholder="Ingrese su contraseña">
+            <button type="submit">Enviar</button>
+            <%if(typeof error=="string") {%>
+              <p><%=error%></p>
+            <%}%>
+          </form>
+        </div>
+      </div>
+      <%- include('partials/footer')%>

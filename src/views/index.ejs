@@ -1,0 +1,44 @@
+<%- include('partials/head')%>
+      <%- include('partials/header')%>
+        <div class="center-container">
+          <div class="img-container">
+            <img src="/images/IMG-main.jpeg" alt="">
+          </div>
+          <div class="center-container-text">
+            <p class="center-container-text-p">Ingeme SA es una empresa que provee servicios de construcciones civiles en telecomunicaciones e infraestructura.
+            La empresa cuenta con recursos de ultima generacion para poder brindar un servicio optimo y una experiencia de años en el rubro.</p>
+          </div>
+          <div class="center-container-subtitle">
+            <p class="center-container-subtitle-p">Nuestros servicios</p>
+          </div>
+          <div class="center-container-boards">
+            <a class="center-container-works" href="/?servicio=tunelera#service"> 
+              <img class="center-container-works-img" src="/images/img-icon1.png" alt="">
+              <p class="center-container-works-p">Tunelería inteligente</p>
+            </a>
+            <a class="center-container-laid" href="/?servicio=obras#service"> 
+              <img class="center-container-laid-img" src="/images/img-icon2.png" alt="">
+              <p class="center-container-laid-p">Obras integrales de fibra óptica</strong></p>
+            </a>
+            <a class="center-container-splice" href="/?servicio=mantenimiento#service">
+              <img class="center-container-splice-img" src="/images/img-icon3.png" alt="">
+              <p class="center-container-splice-p">Mantenimiento de redes</p>
+            </a>
+            <a class="center-container-tunnel" href="/?servicio=tgs#service">
+              <img class="center-container-tunnel-img" src="/images/img-icon4.png" alt="">
+              <p class="center-container-tunnel-p">TGS</p>
+            </a>
+          </div>
+        </div>
+        <div class="container-service" id="service">
+          <% if(img) {%>
+            <img class="container-service-img" src="/images/<%=img%>" alt="">
+          <%}%>
+          <p class="container-service-text">
+            <%=texto%>
+          </p>
+
+        </div>
+
+      <%- include('partials/footer')%>
+

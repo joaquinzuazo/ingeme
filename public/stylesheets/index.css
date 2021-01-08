@@ -1,0 +1,280 @@
+/* -------------------- INDEX.EJS -------------------- */
+
+
+/* -------------------- GENERAL */
+/* -------------------- aplica a todas.  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(241, 241, 241);
+}
+
+
+/* -------------------- HEADER */
+/* -------------------- aplica a todas.  */
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: sticky;
+    background-color: rgba(241, 241, 241, 0.5);
+    top: 10px;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-bottom: 10px; 
+    margin-top: 10px;  
+}
+
+.main-nav-link {
+    margin-bottom: 10px; 
+    margin-top: 10px;  
+}
+
+.title-img {
+    width: 10%;
+}
+
+.title-subtitle {
+    font-size: 1.2em;
+    letter-spacing: 0.15em;
+    margin-left: 10px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid rgb(184, 182, 182);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.main-nav a {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    font-size: 0.8em;
+}
+
+.main-nav, a:hover, a:focus {
+    background-size: 100% 2px;
+}
+
+
+.main-nav-link {
+    padding: 5px;
+    text-decoration: none;
+}
+
+.main-nav-link, a:visited{
+    color: black
+}
+
+
+/* -------------------- MAIN  */
+
+.center-container {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+/* -------------------- MAIN-IMG */
+
+.img-container, img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.center-container-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.center-container-text-p {
+    padding: 10px;
+    margin-top: 50px;
+    text-align: justify;
+    line-height : 35px;
+    font-size: 1em;
+
+}
+
+.center-container-subtitle {
+    padding: 10px;
+    margin-top: 50px;
+    letter-spacing: 0.15em;
+    font-size: 1.2em;
+    border-bottom: 1px solid rgb(184, 182, 182);
+    margin-bottom: 20px;
+}
+
+/* -------------------- MAIN-CONTENEDORES */
+
+.center-container-boards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.center-container-boards, a {
+    text-decoration: none;
+}
+
+.center-container-boards, a:visited{
+    color: black
+}
+
+.center-container-works, .center-container-laid, .center-container-splice, .center-container-tunnel {
+    padding: 1%;
+    -webkit-box-shadow: 0px 0px 36px -23px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 36px -23px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 36px -23px rgba(0,0,0,0.75);
+    
+    width: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.center-container-works {
+    background-color: #FDE59B;
+}
+
+.center-container-laid {
+    background-color: #A3D9DB;
+}
+
+.center-container-splice {
+    background-color: #D6B5D0;
+}
+
+.center-container-tunnel {
+    background-color: #CBE3C3
+}
+
+.center-container-works:hover, .center-container-laid:hover, .center-container-splice:hover, .center-container-tunnel:hover{
+    -webkit-box-shadow: 0px 0px 36px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 36px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 36px -13px rgba(0,0,0,0.75);
+}
+
+.center-container-works-img, .center-container-laid-img, .center-container-splice-img, .center-container-tunnel-img {
+    width: 70%;
+    border-radius: 100%;
+}
+
+.center-container-works-p, .center-container-laid-p, .center-container-splice-p, .center-container-tunnel-p {
+    font-size: 0.7em;
+    padding: 10px;
+}
+
+
+/* -------------------- SERVICIO  */
+
+.container-service {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.container-service-text {
+    line-height : 30px;
+    text-align: justify;
+    width: 50%;
+    font-size: 0.8em;
+}
+
+.container-service-img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+
+/* -------------------- FOOTER  */
+/* -------------------- aplica a todas.  */
+
+.footer-conteiner {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    margin-top: 3%;
+    padding: 10px;
+    border-top: 1px solid rgb(184, 182, 182);
+}
+
+.footer-conteiner-text-p {
+    font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+
+
+/* -------------------- LOGIN.EJS -------------------- */
+.center-container-login{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.form-container-form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 1%;
+    margin: auto;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 36px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 36px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 36px -13px rgba(0,0,0,0.75);
+    border-radius: 15px;
+}
+
+.form-container-form input {
+    padding: 7px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.form-container-form button {
+    padding: 7px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.form-container-form p {
+    font-size: 0.8em;
+    text-align: center;
+    color: tomato;
+    padding: 7px;
+    margin: 5px;
+}
