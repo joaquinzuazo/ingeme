@@ -7,6 +7,12 @@ var session=require('express-session');
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
+var contactoRouter = require('./routes/contacto');
+var proyectoRouter = require('./routes/proyecto');
+var visionRouter = require('./routes/vision');
+var usersRouter = require('./routes/users');
+
+var authentication=require("../middlewares/authentication")
 
 var app = express();
 
@@ -20,9 +26,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(session({secret:"una frase",resave:false,saveUninitialized:true,}));
+app.use(session({secret:"una frase",resave:false,saveUninitialized:true,}));
+
 
 app.use('/', indexRouter);
-app.use('/login', loginRouter);
+app.use('/login',authentication("usuario"), loginRouter);
+app.use('/contacto', contactoRouter);
+app.use('/proyectos', proyectoRouter);
+app.use('/vision', visionRouter);
+app.use('/users',authentication("invitado"), usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

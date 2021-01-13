@@ -1,0 +1,22 @@
+<%- include('partials/head')%>
+      <%- include('partials/userHeader')%>
+      <div class="center-container">
+        <h2>Datos utiles de obra: <%=obra%></h2>
+
+        <table class="center-container-obras-table">
+          <tr class="center-container-obras-table-info">
+                <td class="table-title"><strong>ID</strong></td>
+                <td class="table-title"><strong>Fecha</strong></td>
+                <td class="table-title"><strong>Dato</strong></td>
+          </tr>
+          <%datos.forEach(function(dato){%>
+          <tr class="center-container-obras-table-info">
+                <td><%=dato.id%></td>
+                <td><%=dato.fecha%></td>
+                <td><%=dato.dato%></td>
+          <%})%>
+          </tr>
+    </table>
+      </div>
+      
+<%- include('partials/userFooter')%>

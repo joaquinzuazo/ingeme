@@ -1,0 +1,25 @@
+<%- include('partials/head')%>
+      <%- include('partials/header')%>
+      <div class="center-container-contact">
+        <div class="center-container-contact-subtitle">
+            <h2>Contacto</h2>
+        </div>
+        <div class="form-contact-container">
+          <form class="form-contact-container-form" action="/contacto/envio" method="POST">
+            <input type="nombre" name="nombre" placeholder="Ingrese su nombre">
+            <input type="apellido" name="apellido" placeholder="Ingrese su apellido">   
+            <input type="email" name="email" placeholder="Ingrese su email">
+            <textarea name="consulta" id="consulta" cols="30" rows="10"></textarea>
+            <button type="submit">Enviar</button>
+                <div class="form-contact-container-msg">
+                <%if(typeof consulta=="string") {%>
+                    <p><%=consulta%></p>
+                <%}%>
+                <%if(typeof mensaje=="string") {%>
+                    <p><%=mensaje%></p>
+                <%}%>
+                </div>
+          </form>
+        </div>
+      </div>
+      <%- include('partials/footer')%>

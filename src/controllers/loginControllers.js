@@ -1,17 +1,27 @@
-const fs=require("fs")
-const path=require("path")
+const conexion = require("./conexionDbControllers");
+const util=require("util");
+const qy=util.promisify(conexion.query).bind(conexion); // permite el uso de asyn-await en la conexion mysql
+const bcrypt=require('bcrypt');
+
 
 module.exports= {
     vista:(req, res, next)=>{
       res.render('login', { title: 'INGEME S.A.', style: "index"})
   },
-    login:(req, res, next)=>{
-      let user=fs.readFileSync(path.join(__dirname,"..","data",'user.json'),{encoding:"utf-8"});
-      user=JSON.parse(user)
-      if(req.body.email==user["email"] && req.body.password==user["contraseña"]){
-          res.send("Hola "+req.body.email+" tu login fue exitoso.")
+    login:async (req, res, next)=>{
+      const query="SELECT * FROM users WHERE email=?";
+      const respuesta=await qy(query,[req.body.email]);
+      if(respuesta.length!=0){
+        if(bcrypt.compareSync(req.body.password,respuesta[0].pass)){
+          req.session.login=respuesta[0]
+          delete (req.session.login.pass)
+          //res.render('userIndex', {title: 'INGEME S.A.',style:"index"})
+          res.redirect("/users")
+        } else {
+          res.render('login', {title: 'INGEME S.A.',style:"index", error:"La contraseña es incorrecta."})
+        }
       } else {
-        res.render('login', { title: 'INGEME S.A.',style: "index", error:"Contraseña o email incorrecto"})
-      }      
-}
-}
+      res.render('login', {title: 'INGEME S.A.',style:"index", error:"El usuario no existe."})
+    }
+  }
+} 
