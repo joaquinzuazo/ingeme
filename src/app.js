@@ -12,7 +12,7 @@ var proyectoRouter = require('./routes/proyecto');
 var visionRouter = require('./routes/vision');
 var usersRouter = require('./routes/users');
 
-var authentication=require("../middlewares/authentication")
+var authentication=require("../src/middlewares/authentication")
 
 var app = express();
 

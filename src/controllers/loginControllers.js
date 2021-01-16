@@ -1,7 +1,7 @@
 const conexion = require("./conexionDbControllers");
 const util=require("util");
 const qy=util.promisify(conexion.query).bind(conexion); // permite el uso de asyn-await en la conexion mysql
-const bcrypt=require('bcrypt');
+const bcrypt=require('bcryptjs');
 
 
 module.exports= {
