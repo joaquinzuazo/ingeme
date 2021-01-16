@@ -1,6 +1,5 @@
 module.exports= {
     index:(req, res, next)=>{
-        res.send("proyectos");
-      // res.render('login', { title: 'INGEME S.A.', style: "index"})
+        res.render('proyectos', { title: 'INGEME S.A.', style: "index"})
     }
 }

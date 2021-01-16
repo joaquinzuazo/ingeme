@@ -145,28 +145,17 @@ body {
     -webkit-box-shadow: 0px 0px 36px -23px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 36px -23px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 36px -23px rgba(0,0,0,0.75);
-    
-    width: 12%;
+    font-size: 1.2em;
+    width: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     border-radius: 25px;
 }
 
-.center-container-works {
-    background-color: #FDE59B;
-}
-
-.center-container-laid {
-    background-color: #A3D9DB;
-}
-
-.center-container-splice {
-    background-color: #D6B5D0;
-}
-
-.center-container-tunnel {
-    background-color: #CBE3C3
+.center-container-works, .center-container-laid, .center-container-splice, .center-container-tunnel {
+    background-color: white
 }
 
 .center-container-works:hover, .center-container-laid:hover, .center-container-splice:hover, .center-container-tunnel:hover{
@@ -176,7 +165,7 @@ body {
 }
 
 .center-container-works-img, .center-container-laid-img, .center-container-splice-img, .center-container-tunnel-img {
-    width: 70%;
+    width: 100%;
     border-radius: 100%;
 }
 
@@ -224,6 +213,7 @@ body {
 
 .footer-conteiner-text-p {
     font-size: 0.8em;
+    color: black;
 }
 
 .footer-conteiner-text, a:visited{
@@ -278,7 +268,7 @@ body {
 .form-container-form p {
     font-size: 0.8em;
     text-align: center;
-    color: tomato;
+    color: teal;
     padding: 7px;
     margin: 5px;
 }
@@ -323,7 +313,7 @@ body {
     letter-spacing: 0.15em;
     font-size: 1.2em;
     text-align: center;
-    color: tomato;
+    color: teal;
 }
 
 .form-contact-container-form {
@@ -365,7 +355,7 @@ body {
 .form-contact-container-msg p {
     font-size: 0.7em;
     text-align: center;
-    color: tomato;
+    color: teal;
     padding: 7px;
 }
 
@@ -439,7 +429,7 @@ body {
 .center-container-title {
     text-align: center;
     letter-spacing: 0.15em;
-    color: tomato;
+    color: teal;
 }
 
 
@@ -447,19 +437,58 @@ body {
 /* -------------------- USEROBRAS.EJS -------------------- */
 .center-container-obras{
     margin-top: 5%;
+    font-size: 0.8em;
 }
 .center-container-obras-subtitle{
-    text-align: center;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.25em;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: tomato;
+    color:teal;
     text-decoration: underline;
 }
 
+.center-container-obras-menu{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.center-container-obras-menu-op{
+    margin: 0.5%;
+}
+
+.center-container-obras-menu p {
+    color: rgb(99, 96, 91);
+}
+
+.center-container-obras-menu-op-input input{
+    margin: 0.5%;
+    border-radius: 5px;
+    padding: 0.5%;
+}
+
+.center-container-obras-menu-op-button{
+    display: flex;
+}
+
+.center-container-obras-menu-op-button button{
+    margin: 0.5%;
+    border-radius: 5px;
+    padding: 0.5%;
+}
+
+.center-container-obras-menu-op-p {
+    margin-left: 0.5%;
+}
+
+.center-container-obras-menu-op-p p {
+    color: teal;
+}
+
+
+
 .center-container-obras-table {
-    margin-bottom: 5%;
-    margin-top: 5%;
     width: 100%;
     border-collapse: collapse;
 }
@@ -470,9 +499,9 @@ body {
     background-color: white;
 }
 
-.center-container-obras-table-info {
-    font-size: 0.8em;   
+.center-container-obras-table-info {  
     margin-bottom: 10px;
+    font-size: 0.9em;
 }
 
 .center-container-obras-table-info img {
@@ -484,4 +513,45 @@ body {
 }
 .table-center {
     text-align: center;
+}
+
+
+/* -------------------- PROYECTOS.EJS -------------------- */
+
+.center-container-proy {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.center-container-proy-one {
+    padding: 1%;
+    -webkit-box-shadow: 0px 0px 36px -23px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 36px -23px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 36px -23px rgba(0,0,0,0.75);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    margin: 2%;
+    width: 30%;
+}
+
+
+.center-container-proy-one:hover{
+    -webkit-box-shadow: 0px 0px 36px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 36px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 36px -13px rgba(0,0,0,0.75);
+}
+
+.center-container-proy-one-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.center-container-proy-one-p {
+    font-size: 0.7em;
+    padding: 10px;
 }

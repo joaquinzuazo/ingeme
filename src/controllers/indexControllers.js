@@ -5,7 +5,7 @@ var obra="Desarrollamos proyectos tanto en las regiones urbanas como interurbana
 
 var man="El mantenimiento preventivo consiste en recorridas sobre la red del cableado de FO, mediante las cuales se verifica el estado de todos los elementos que la componen, es decir, sus canalizaciones, postes, cámaras, cajas de empalme, ODFs, conectores, rotulados, etc., mediante distintos procedimientos a fin de prevenir inconvenientes futuros y mantener en perfectas condiciones su funcionalidad."
 
-var otro="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis beatae in iusto id neque doloremque tempora, nobis earum? Veniam alias totam unde voluptas iure ut. Voluptatem exercitationem ratione facilis nam"
+var otro="Desarrollamos proyectos para gas y petróleo. Proveemos personal capacitado y certificado de acuerdo a los requerimientos de API 1104 para trabajos de reemplazos de cañerias, soldaduras, refuerzos, entre otros."
       
 
 module.exports= {
@@ -17,7 +17,7 @@ module.exports= {
             break;
             case "mantenimiento":res.render('index', { title: 'INGEME S.A.', style: "index", texto:man,img:"img-mante.jpeg"});
             break;
-            case "tgs":res.render('index', { title: 'INGEME S.A.', style: "index", texto:otro,img:undefined });
+            case "gas":res.render('index', { title: 'INGEME S.A.', style: "index", texto:otro,img:"img-gas.jpeg"});
             break;
             default:res.render('index', { title: 'INGEME S.A.', style: "index", texto:"",img:undefined});
   }

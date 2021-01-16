@@ -1,0 +1,47 @@
+<%- include('partials/head')%>
+      <%- include('partials/userHeader')%>
+      <div class="center-container">
+            <div class="center-container-obras">
+                  <div class="center-container-obras-subtitle">
+                        <h2>Avances de obra: <%=obra.nombre%></h2>
+                  </div>
+                  <div class="center-container-obras-menu">
+                        <strong><p>Menu:</p></strong>
+                        <div class="center-container-obras-menu-op" id="menu">
+                              <form action="/users/obras/<%=obra.id%>/reportes" method="POST">
+                                    <div class="center-container-obras-menu-op-input">
+                                          <input type="number" name="id" placeholder="ID del dato">
+                                          <input type="date" name="fecha" placeholder="Fecha">
+                                          <input type="text" name="tarea" size=90 placeholder="Tarea">
+                                          <input type="text" name="estado" size=90 placeholder="Estado">
+                                    </div>
+                                    <div class="center-container-obras-menu-op-p">
+                                          <p><small>ID de obra, solo indicar para "editar" o "eliminar". En el caso de "guardar" se generara automaticamente.</small></p>
+                                    </div>
+                                    <div class="center-container-obras-menu-op-button">
+                                          <button type="submit" name="button" value="guardar">Guardar</button>
+                                          <button type="submit" name="button" value="editar">Editar</button>
+                                          <button type="submit" name="button" value="eliminar">Eliminar</button>
+                                    </div>
+                              </form>
+                        </div>
+                  </div>
+                  <table class="center-container-obras-table">
+                  <tr class="center-container-obras-table-info">
+                        <td class="table-title"><strong>ID</strong></td>
+                        <td class="table-title"><strong>Fecha</strong></td>
+                        <td class="table-title"><strong>Tarea</strong></td>
+                        <td class="table-title"><strong>Estado</strong></td>
+                  </tr>
+                  <%datos.forEach(function(dato){%>
+                  <tr class="center-container-obras-table-info">
+                        <td><%=dato.id%></td>
+                        <td><%=dato.fecha%></td>
+                        <td><%=dato.tarea%></td>
+                        <td><%=dato.estado%></td>
+                  <%})%>
+                  </tr>
+            </table>
+                  </div>
+      
+<%- include('partials/userFooter')%>

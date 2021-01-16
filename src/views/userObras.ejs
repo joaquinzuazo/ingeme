@@ -3,8 +3,30 @@
       <div class="center-container">
             <div class="center-container-obras">
                   <div class="center-container-obras-subtitle">
-                        <h2>Obras cargadas</h2>
+                        <h2>Obras</h2>
                   </div>
+                  <div class="center-container-obras-menu">
+                        <strong><p>Menu:</p></strong>
+                        <div class="center-container-obras-menu-op" id="menu">
+                              <form action="obras/menu/form" method="POST">
+                                    <div class="center-container-obras-menu-op-input">
+                                          <input type="number" name="id" placeholder="ID de obra">
+                                          <input type="text" name="nombre" placeholder="Nombre de la obra">
+                                          <input type="text" name="detalle" size=60 placeholder="Detalle">
+                                          <input type="text" name="ubicacion" size=40 placeholder="Ubicacion">
+                                    </div>
+                                    <div class="center-container-obras-menu-op-p">
+                                          <p><small>ID de obra, solo indicar para "editar" o "eliminar". En el caso de "guardar" se generara automaticamente.</small></p>
+                                    </div>
+                                    <div class="center-container-obras-menu-op-button">
+                                          <button type="submit" name="button" value="guardar">Guardar</button>
+                                          <button type="submit" name="button" value="editar">Editar</button>
+                                          <button type="submit" name="button" value="eliminar">Eliminar</button>
+                                    </div>
+                              </form>
+                        </div>
+                  </div>
+
                   <table class="center-container-obras-table">
                         <tr class="center-container-obras-table-info">
                               <td class="table-title"><strong>ID</strong></td>
